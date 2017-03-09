@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/global.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="section-a banner">
+        <div class="banner-align">
+                <h1 class="text-center"> CHRISTOPHER WEI </h1>
+                <h3 class="text-center"> World Famous </h3>
+                <h2 class="text-center"> Engineer / Artist / Superstar </h2>
+        </div>
+    </div>
+    <a href="#start">
+    <div class="banner-footer text-center">
+        <i class="banner-align fa fa-arrow-circle-down" aria-hidden="true"></i>
+    </div>
+    </a>
+    <a id="start"></a>
+    <div class="section-b">
+        <div class="container">
+        <div class="titling large top24">RECENT WORK</div>
+        <ul class="list-unstyled">
+        <% for(var i=0; i < recent_work.length; i++) {%>
+            <a href= "/work/<%= recent_work[i].id %>">
+            <li class="item">
+                
+                <div class="row">
+                    <div class="col-md-8 titling-light"><%= recent_work[i].tags %></div>
+                    <div class="col-md-4 titling-light"><span class="pull-right"><%= recent_work[i].date %></span></div>
+                </div>
+                <div class="titling medium top16"><%= recent_work[i].title %></div>
+                <%= recent_work[i].description %>
+            </li>
+            </a>
+        <% } %>
+        </ul>
+        </div>
+    </div>
+    <div class="section-c">
+        <div class="container">
+        <div class="titling large top24"> ABOUT ME </div>
+        <div class="row top24">
+            <div class="col-md-3"><img class="shadowed" src="me.jpg" style="width:100%"></div>
+            <div class="col-md-9">
+                <div class="titling medium">CHRISTOPHER WEI</div>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit nulla, vestibulum vel fermentum ut, volutpat eu quam. Phasellus blandit lorem in ipsum viverra vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent a nisl hendrerit, euismod tortor a, mollis diam. Fusce placerat magna leo, nec ullamcorper ex tincidunt et. Suspendisse imperdiet pharetra quam in viverra. Vivamus venenatis turpis massa, non elementum diam mollis eu. Praesent a nisl hendrerit, euismod tortor a, mollis diam. Fusce placerat magna leo, nec ullamcorper ex tincidunt et. Suspendisse imperdiet pharetra quam in viverra. Vivamus venenatis turpis massa, non elementum diam mollis eu. Vivamus venenatis turpis massa, non elementum diam mollis eu.</p>
+            </div>
+        </div>
+        
+        <div class="titling medium top24"> EDUCATION </div>
+        <ul class="list-unstyled">
+            <li class="item">
+                <div class="row">
+                    <div class="col-md-8 titling-light">UNDERGRAD</div>
+                    <div class="col-md-4 titling-light"><span class="pull-right">2013-2017</span></div>
+                </div>
+                <div class="titling medium top16">CARNEGIE MELLON UNIVERSITY</div>
+                M.S./B.S. in Electrical and Computer Engineering
+            </li>
+        </ul>
+        <div class="titling medium top24"> CONTACT </div>
+        <div class="titling large top24"> SKILLS </div>
+    </div>
+    <div class="section-d">
+        <div class="container" style="height:300px">
+            Footer
+        </div>
+    </div>
+</body>
+</html>
